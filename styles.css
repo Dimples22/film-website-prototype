@@ -1,0 +1,285 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* You can change the font family */
+}
+
+body {
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text */
+}
+
+/* Header Styles */
+#header {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-image: url('images/background.png'); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.container {
+  padding: 0 10%; /* Padding on the sides */
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and links */
+}
+
+.logo {
+  width: 140px; /* Logo width */
+}
+
+nav ul {
+  display: flex; /* Align menu items horizontally */
+  list-style: none; /* Remove bullet points */
+}
+
+nav ul li {
+  margin: 0 20px; /* Space between menu items */
+}
+
+nav ul li a {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px; /* Font size */
+  position: relative; /* For pseudo-element positioning */
+}
+
+nav ul li a:hover {
+  color: #1E4A2E; /* Change color on hover */
+}
+
+.header-text {
+  margin-top: 20px; /* Space above header text */
+  text-align: center; /* Center the text */
+}
+
+.header-text h1 {
+  font-size: 60px; /* Large font size for header */
+  margin-top: 20px; /* Space above heading */
+}
+
+.header-text p {
+  font-size: 30px; /* Smaller font size for subheading */
+}
+
+.client-photo {
+  width: 400px; /* Adjust this value for desired width */
+  height: auto; /* Keep the aspect ratio */
+  border: 5px solid #1E4A2E; /* Green border */
+  border-radius: 0; /* Remove the circular shape */
+  margin-left: 20px; /* Space between the text and image */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-text h1 {
+      font-size: 40px; /* Adjust font size for mobile */
+  }
+  nav ul {
+      flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
+
+/* About Section */
+#about {
+  padding: 80px 0;
+  color: #fff; /* Change to your preferred text color */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.subtitle {
+  font-size: 60px;
+  font-weight: 600;
+  color: white; /* Adjust as needed */
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links:after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #fff; /* Underline color */
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: width 0.5s;
+}
+
+.tab-links.active-link:after {
+  width: 100%; /* Underline active link */
+}
+
+.tab-contents {
+  display: none; /* Hide all contents initially */
+}
+
+.tab-content {
+  display: none; /* Hide all contents initially */
+}
+
+.active-tab {
+  display: block; /* Show active tab content */
+}
+
+/* Style the list in each tab */
+.tab-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tab-content li {
+  margin: 10px 0;
+}
+
+.tab-content span {
+  font-weight: bold;
+}
+
+/* Film Projects Section */
+#projects {
+  padding: 80px 0; /* Added space for the section */
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.projects-list div {
+  background-color: #1E4A2E; /* Adjust this color code as needed */
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.projects-list div:hover {
+  background-color: #1C442B; /* Change this on hover */
+  transform: translateY(-10px);
+}
+
+.projects-list h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #ffffff; /* Title color */
+}
+
+/* Contact Section Styles */
+#contact {
+  padding: 50px 0;
+  background-color: #1E4A2E; /* Green background */
+  color: #fff; /* White text */
+}
+
+#contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contact h1.subtitle {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff; /* White subtitle */
+}
+
+#contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#contact .social-icons a {
+  font-size: 20px;
+  color: #fff; /* White social icons */
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+#contact .social-icons a:hover {
+  color: #000; /* Black on hover */
+}
+
+#contact .btn {
+  background-color: #000; /* Black button background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#contact .btn:hover {
+  background-color: #fff; /* White background on hover */
+  color: #000; /* Black text on hover */
+  border: 1px solid #000; /* Black border */
+}
+
+.contact-info {
+  background-color: #1E4A2E; /* Green box background */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff; /* White text */
+}
+
+.contact-info a {
+  color: #fff; /* White links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  color: #000; /* Black text on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 40px; /* Adjust font size for mobile */
+  }
+  nav ul {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
